@@ -8,7 +8,7 @@
 2. Install Active Directive Windows Feature
 
 ```shell
-Install-WindowsFeature AD-Domain-Services -includeManagementTools
+Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
 ```
 
 
