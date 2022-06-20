@@ -14,13 +14,13 @@
 # 2. Create/Spawn Windows VM - Management workstation
 
 Add server to ```TrustedHost```
-To enable remote management of a computer or server through WinRM (Windows Remote Management), add computers to the TrustedHosts list. 
-```
-            ls WSMan:\localhost\Client\TrustedHost\
 
-            Set-Item WSMan:\localhost\Client\TrustedHosts -Value $ip
-           
-            New-PSSession -ComputerName $ip -Credential (Get-Credential) 
+To enable remote management of a computer or server through WinRM (Windows Remote Management), add computers to the TrustedHosts list. 
+
+```
+    ls WSMan:\localhost\Client\TrustedHost\
+    Set-Item WSMan:\localhost\Client\TrustedHosts -Value $ip
+    New-PSSession -ComputerName $ip -Credential (Get-Credential) 
 ```
 
 Enter PSSession on TrustedHost (remote)
@@ -29,7 +29,8 @@ Enter PSSession on TrustedHost (remote)
 
 # 3. Create/Spawn Windows VM - Workstation client
 1. Setup networking
-```Get-NetIpAddress //this is to find out interface index
+```
+    Get-NetIpAddress //this is to find out interface index
     Get-DNSClientServerAddress
     Set-DNSClientServerAddress -InterfaceIndex 10 -ServerAddresses $ip
 ```
