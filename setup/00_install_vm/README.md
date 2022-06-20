@@ -3,11 +3,11 @@
 
 # 1. Install Windows Server 2022 VM
 ```enable-PSRemoting```
-    - Setup server name
-    - Setup networking 
-        - Static IP addr
-        - Default gateway
-        - Primary DNS
+- Setup server name
+- Setup networking 
+    - Static IP addr
+    - Default gateway
+    - Primary DNS
     
        
 
@@ -18,7 +18,7 @@ Add server to ```TrustedHost```
 To enable remote management of a computer or server through WinRM (Windows Remote Management), add computers to the TrustedHosts list. 
 
 ```
-    ls WSMan:\localhost\Client\TrustedHost\
+    ls WSMan:\localhost\Client\TrustedHost\ //list trusted hosts
     Set-Item WSMan:\localhost\Client\TrustedHosts -Value $ip
     New-PSSession -ComputerName $ip -Credential (Get-Credential) 
 ```
