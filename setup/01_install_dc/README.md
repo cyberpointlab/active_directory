@@ -2,7 +2,7 @@
 
 1. Use ```sconfig``` to:
     - change the hostname
-    - chante the IP address to static
+    - change the IP address to static
     - change the DNS to our own IP addr
 
 2. Install Active Directive Windows Feature
