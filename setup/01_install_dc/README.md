@@ -12,7 +12,7 @@
     Import-Module ADDSDeployment
     Install-ADDSForest
 ```
-    - setup DNS again because it is reverted to 127.0.0.1
+- Setup DNS again because it is reverted to 127.0.0.1
 
 
 
