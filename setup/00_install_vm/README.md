@@ -2,14 +2,13 @@
 
 
 # 1. Install Windows Server 2022 VM
-```enable-PSRemoting```
+```enable-PSRemoting``` //This is to enable PS Remoting
 - Setup server name
 - Setup networking 
     - Static IP addr
     - Default gateway
     - Primary DNS
     
-       
 
 # 2. Create/Spawn Windows VM - Management workstation
 
@@ -36,4 +35,5 @@ Enter PSSession on TrustedHost (remote)
 ```
  
 2. Join computer to domain
+
 ```Add-Computer -DomainName $domainname -Credential $domainname\administrator -Force -Restart```
