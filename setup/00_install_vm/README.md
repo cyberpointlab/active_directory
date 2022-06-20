@@ -1,18 +1,17 @@
-# 00 - Install VM
+# 00 - Install VMs
 
 
 # 1. Install Windows Server 2022 VM
-    - ```enable-PSRemoting```
+    ```
+    enable-PSRemoting
+    ```
     - Setup server name
     - Setup networking 
         - Static IP addr
         - Default gateway
         - Primary DNS
-    ## Install AD
-    ```Install-WindowsFeature AD-Domain-Services -IncludeManagementTools```
-    ```Import-Module ADDSDeployment```
-    ```Install-ADDSForest```
-    - Setup DNS again because it is reverted to loopback 127.0.0.1
+    
+       
 
 # 2. Create/Spawn Windows VM - Management workstation
 
@@ -27,8 +26,10 @@
             New-PSSession -ComputerName $ip -Credential (Get-Credential) 
 
         ```
-    - Enter PSSession    
-    ```Enter-PSSession $ID```
+    - Enter PSSession on TrustedHost (remote)    
+    ```shell
+    Enter-PSSession $ID
+    ```
 
 # 3. Create/Spawn Windows VM - Workstation client
     ## setup networking
