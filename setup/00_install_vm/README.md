@@ -32,12 +32,9 @@ Enter-PSSession $ID
 
 # 3. Create/Spawn Windows VM - Workstation client
 1. Setup networking
-```shell
-    Get-NetIpAddress //this is to find out interface index
+```Get-NetIpAddress //this is to find out interface index
     Get-DNSClientServerAddress
-    Set-DNSClientServerAddress -InterfaceIndex 10 -ServerAddresses $ip
-```
+    Set-DNSClientServerAddress -InterfaceIndex 10 -ServerAddresses $ip```
  
 2. Join computer to domain
-```Add-Computer -DomainName $domainname -Credential $domainname\administrator -Force -Restart
-```
+```Add-Computer -DomainName $domainname -Credential $domainname\administrator -Force -Restart```

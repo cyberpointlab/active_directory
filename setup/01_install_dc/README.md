@@ -7,9 +7,12 @@
 
 2. Install Active Directive Windows Feature
 
-```shell
-Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
-```
+    ```
+    Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
+    Import-Module ADDSDeployment
+    Install-ADDSForest
+    ```
+    - setup DNS again because it is reverted to 127.0.0.1
 
 
 
